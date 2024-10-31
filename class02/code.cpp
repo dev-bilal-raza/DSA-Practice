@@ -53,9 +53,9 @@ int main (){
         for (int k=1; k<=i+1; k++){
             cout << k;
         }
-            for (int l=i; l>=1; l--){
-                cout << l;
-            }
+        for (int l=i; l>=1; l--){
+            cout << l;
+        }
         
         cout << endl;
     }
