@@ -13,9 +13,22 @@ int decToBin(int decNum){
     return answer;
 }
 
+// Decimal to Binary:
+int binToDec(int binNum){
+    int answer = 0, pow = 1;
+    while(binNum>0){
+        int rem = binNum % 10;
+        binNum = binNum / 10;
+        answer+= (rem * pow);
+        pow *= 2;
+    }
+    return answer;
+}
+
 
 int main(){
-    int answer = decToBin(81);
+    // int answer = decToBin(81);
+    int answer = decToBin(1010001);
     cout << answer << endl;
     return answer;
 }
