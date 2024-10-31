@@ -28,7 +28,7 @@ int binToDec(int binNum){
 
 int main(){
     // int answer = decToBin(81);
-    int answer = decToBin(1010001);
+    int answer = binToDec(1010);
     cout << answer << endl;
     return answer;
 }
