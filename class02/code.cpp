@@ -3,9 +3,9 @@ using namespace std;
 
 int main (){
 
-    // Question 01
+    // Nested for-loops
     // int n = 4;
-    // char charac = 1;
+    // int charac = 1;
     // for (int i=1; i<=n; i++){
     //     for (int j=1; j<=n; j++){
     //         cout << charac ;
@@ -14,7 +14,7 @@ int main (){
     //     cout << endl;
     // } 
 
-    // Question 02
+    // Question 02 -> left-aligned right-angled triangle made of asterisks (*).
     // int n = 7;
     // for (int i=1; i<=n; i++){
     //     for (int j=0; j<i; j++){
@@ -23,7 +23,7 @@ int main (){
     //     cout << endl;
     // } 
 
-    // Question 03
+    // Question 03 -> left-aligned triangle with decreasing numbers in each row
     // int n = 5;
     // for (int i=1; i<=n; i++){
     //     for (int j=i; j>0; j--){
@@ -32,7 +32,7 @@ int main (){
     //     cout << endl;
     // }
 
-    // // Question 04
+    // // Question 04 ->  right-aligned triangle with decreasing width.
     // int n = 5;
     // for (int i=0; i<n; i++){
     //     for (int j=0; j<i; j++){
@@ -44,7 +44,7 @@ int main (){
     //     cout << endl;
     // }
 
-    // Question 05
+    // Question 05 -> pyramid pattern
     int n = 5;
     for (int i=0; i<n; i++){
         for (int j=0; j<n-i-1; j++){
