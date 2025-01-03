@@ -6,6 +6,7 @@
 /*.o
 /*.obj
 /*.exe
+/*.out
 /*.dll
 /*.so
 /*.dylib
