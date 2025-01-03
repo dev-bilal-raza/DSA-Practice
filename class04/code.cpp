@@ -1,6 +1,25 @@
 #include <iostream>
 using namespace std;
 
+int linearSearch(int arr[], int siz, int target)
+{
+    bool hasFound = false;
+    for (int i = 0; i < siz; i++)
+    {
+        if (arr[i] == target)
+        {
+            hasFound = true;
+            cout << "Element Found at Postion: " << ++i << endl;
+            break;
+        }
+    }
+    if (not hasFound)
+    {
+        cout << "Element not found" << endl;
+    }
+    return 0;
+}
+
 int main()
 {
     //=============================================== Array Data Structure
@@ -13,7 +32,6 @@ int main()
     //     cout << arr[i] << endl;
     // }
 
-    //=============================================== Linear Search
     // int size = 5;
     // int arr[size];
     // for (int i = 0; i < sizeof(arr) / sizeof(1); i++){
@@ -31,10 +49,15 @@ int main()
     //     cout << i << endl;
     // }
 
-    const int size = 10;
-    int arr[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    //=============================================== Linear Search
+    int arr[6] = {1, 2, 3, 4, 5, 6};
+    linearSearch(arr, 6, 6);
+
 
     //=============================================== Reverse Array
+    // const int size = 10;
+    // int arr[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
     // 2 Pointer Technique
 
     // First Method
@@ -59,9 +82,9 @@ int main()
     //     i++;
     // }
 
-    for (int i : arr)
-    {
-        cout << i << endl;
-    }
+    // for (int i : arr)
+    // {
+    //     cout << i << endl;
+    // }
     return 0;
 }
