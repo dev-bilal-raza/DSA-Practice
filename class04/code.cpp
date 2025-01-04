@@ -1,90 +1,47 @@
 #include <iostream>
 using namespace std;
 
-int linearSearch(int arr[], int siz, int target)
-{
-    bool hasFound = false;
-    for (int i = 0; i < siz; i++)
-    {
-        if (arr[i] == target)
-        {
-            hasFound = true;
-            cout << "Element Found at Postion: " << ++i << endl;
-            break;
-        }
-    }
-    if (not hasFound)
-    {
-        cout << "Element not found" << endl;
-    }
-    return 0;
-}
-
 int main()
 {
-    //=============================================== Array Data Structure
-    // Loops
-    // const int size = 5;
-    // int arr[size] = {1, 2, 3, 4, 5};
+    // Bitwise Operators
+    // Bitwise operators are used to perform operations on bits of the integer operands. The bitwise operators supported by C++ are:
 
-    // for (int i = 0; i < size; i++)
-    // {
-    //     cout << arr[i] << endl;
-    // }
+    // & (Bitwise AND): It performs a bitwise AND operation on the two operands. The result is 1 if both bits are 1, otherwise 0.
+    cout << (5 & 3) << endl;
 
-    // int size = 5;
-    // int arr[size];
-    // for (int i = 0; i < sizeof(arr) / sizeof(1); i++){
-    //     cout << "Enter a number: ";
-    //     cin >> arr[i];
-    // }
-    // for (int i = 0; i < sizeof(arr) / sizeof(1); i++){
-    //     cout << arr[i] << endl;
-    // }
+    // | (Bitwise OR): It performs a bitwise OR operation on the two operands. The result is 1 if at least one of the bits is 1, otherwise 0.
+    cout << (5 | 3) << endl;
 
-    // const int size = 5;
-    // int arr[] = {1, 1, 2, 3, 4};
-    // for (int i : arr)
-    // {
-    //     cout << i << endl;
-    // }
+    // ^ (Bitwise XOR): It performs a bitwise XOR (exclusive OR) operation on the two operands. The result is 1 if the bits are different, otherwise 0.
+    cout << (5 ^ 3) << endl;
 
-    //=============================================== Linear Search
-    int arr[6] = {1, 2, 3, 4, 5, 6};
-    linearSearch(arr, 6, 6);
-
-
-    //=============================================== Reverse Array
-    // const int size = 10;
-    // int arr[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    // ~ (Bitwise NOT): It performs a bitwise NOT operation on the operand. It flips the bits, i.e., 0 becomes 1 and 1 becomes 0.
+    // << (Left Shift): It shifts the bits of the operand to the left by the specified number of positions. It is equivalent to multiplying the operand by 2^n (if we are shifting n positions to the left).
     
-    // Two Pointer Technique
 
-    // First Method
-    // for (int i = 0; i < size/2; i++)
-    // {
-    //     int temp = arr[i];
-    //     arr[i] = arr[size - i - 1];
-    //     arr[size - i - 1] = temp;
-    // }
+    // >> (Right Shift): It shifts the bits of the operand to the right by the specified number of positions. It is equivalent to dividing the operand by 2^n (if we are shifting n positions to the right).
+    cout << (5 >> 1) << endl;
 
-    // Second Method
-    // for (int i = 0; i < size / 2; i++)
-    // {
-    //     swap(arr[i], arr[size - i - 1]);
-    // }
+    // Data Types Modifiers
+    // Data type modifiers are used with the built-in data types to modify the length of the data that a particular data type can hold. The data type modifiers supported by C++ are:
 
-    // Third Method
-    // int i = 0;
-    // while (i < size / 2)
-    // {
-    //     swap(arr[i], arr[size - i - 1]);
-    //     i++;
-    // }
+    // signed: It is used to declare variables that can hold both positive and negative values.
+    signed int x = 10;
+    cout << x << endl;
 
-    // for (int i : arr)
-    // {
-    //     cout << i << endl;
-    // }
-    return 0;
+    // unsigned: It is used to declare variables that can hold only non-negative values (zero and positive values).n
+    unsigned int y = 10;
+    cout << y << endl;
+
+    // short: It is used to reduce the size of the data type. For example, short int x = 10; will allocate less memory than int x = 10;.
+    short int z = 10;
+    cout << z << endl;
+
+    // long: It is used to increase the size of the data type. For example, long int x = 10; will allocate more memory than int x = 10;.
+    long int a = 10;
+    cout << a << endl;
+
+    // long long: It is used to increase the size of the data type further than long. For example, long long int x = 10; will allocate more memory than long int x = 10;.
+    long long int b = 10;
+    cout << b << endl;
 }

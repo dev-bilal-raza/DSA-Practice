@@ -1,35 +1,90 @@
 #include <iostream>
-#include <vector>
 using namespace std;
+
+int linearSearch(int arr[], int siz, int target)
+{
+    bool hasFound = false;
+    for (int i = 0; i < siz; i++)
+    {
+        if (arr[i] == target)
+        {
+            hasFound = true;
+            cout << "Element Found at Postion: " << ++i << endl;
+            break;
+        }
+    }
+    if (not hasFound)
+    {
+        cout << "Element not found" << endl;
+    }
+    return 0;
+}
 
 int main()
 {
-    // What is STL?
-    // Standard Template Library is a collection of C++ template classes to provide common programming data structures and functions such as lists, stacks, vector, etc. It is a library of container classes, algorithms, and iterators. It is a generalized library and so, its components are parameterized.
+    //=============================================== Array Data Structure
+    // Loops
+    // const int size = 5;
+    // int arr[size] = {1, 2, 3, 4, 5};
 
-    // What are Vectors?
-    // Vectors are same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted, with their storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators.
+    // for (int i = 0; i < size; i++)
+    // {
+    //     cout << arr[i] << endl;
+    // }
 
-    // Vector Syntax
-    // vector<int> vec(3, 2);
-    vector<int> vec = {1, 2};
-    cout << "Capacity of Vector before pushing any value: " << vec.capacity() << endl;
+    // int size = 5;
+    // int arr[size];
+    // for (int i = 0; i < sizeof(arr) / sizeof(1); i++){
+    //     cout << "Enter a number: ";
+    //     cin >> arr[i];
+    // }
+    // for (int i = 0; i < sizeof(arr) / sizeof(1); i++){
+    //     cout << arr[i] << endl;
+    // }
 
-    vec.push_back(3);
-    cout << "Capacity of Vector after pushing one element: " << vec.capacity() << endl;
+    // const int size = 5;
+    // int arr[] = {1, 1, 2, 3, 4};
+    // for (int i : arr)
+    // {
+    //     cout << i << endl;
+    // }
 
-    vec.push_back(4);
-    cout << "Capacity of Vector after pushing one more element: " << vec.capacity() << endl;
+    //=============================================== Linear Search
+    int arr[6] = {1, 2, 3, 4, 5, 6};
+    linearSearch(arr, 6, 6);
 
-    for (int value : vec){
-        cout << value << endl;
-    }
 
-    // Vector Methods
+    //=============================================== Reverse Array
+    // const int size = 10;
+    // int arr[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
+    // Two Pointer Technique
 
-    // Static and Dynamic memory allocation
-    // Static memory allocation is done at compile time while dynamic memory allocation is done at run time. Static memory allocation is done using arrays while dynamic memory allocation is done using pointers. Static memory allocates in stack while dynamic memory allocates in heap.
+    // First Method
+    // for (int i = 0; i < size/2; i++)
+    // {
+    //     int temp = arr[i];
+    //     arr[i] = arr[size - i - 1];
+    //     arr[size - i - 1] = temp;
+    // }
 
-    // Single Number Problem
+    // Second Method
+    // for (int i = 0; i < size / 2; i++)
+    // {
+    //     swap(arr[i], arr[size - i - 1]);
+    // }
+
+    // Third Method
+    // int i = 0;
+    // while (i < size / 2)
+    // {
+    //     swap(arr[i], arr[size - i - 1]);
+    //     i++;
+    // }
+
+    // for (int i : arr)
+    // {
+    //     cout << i << endl;
+    // }
     return 0;
 }
