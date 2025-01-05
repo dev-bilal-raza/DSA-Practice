@@ -60,13 +60,13 @@ int main()
     // Static memory allocation is done at compile time while dynamic memory allocation is done at run time. Static memory allocation is done using arrays while dynamic memory allocation is done using pointers. Static memory allocates in stack while dynamic memory allocates in heap.
 
     // Single Number Problem
-    vector<int> vec = {1, 2, 3};
-    int ans = 1 xor 2;
-    cout << ans << endl;
-    // for (int value : vec)
-    // {
-        
-    // }
+    vector<int> single_num_vec = {1, 2, 1, 2, 4};
+    int ans = 0;
+    for (int value : single_num_vec)
+    {
+        ans ^= value;
+    }
+    cout << "Found Unique Number: " << ans << endl;
 
     return 0;
 }
