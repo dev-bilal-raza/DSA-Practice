@@ -25,5 +25,19 @@ int main()
     }
     cout << "Ans for max SubArray Sum: " << ans << endl;
 
+    // Maximum SubArray Sum using Kadane's Algorithm.
+    int maxSubArraySum = INT_MIN;
+    int currSum = 0;
+    for (int value : arr)
+    {
+        currSum += value;
+        maxSubArraySum = max(maxSubArraySum, currSum);
+        if (currSum < 0)
+        {
+            currSum = 0; // Reset the current sum if it becomes negative.
+        }
+    }
+    cout << "Ans for max SubArray Sum using Kadane's Algorithm: " << maxSubArraySum << endl;
+
     return 0;
 }
